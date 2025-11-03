@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(103, 142, 177);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-container {
+  width: 400px;
+  height: 80vh;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.user-chat-box,
+.ai-chat-box {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.user-chat-box {
+  justify-content: flex-end;
+}
+
+.user-chat-area {
+  background-color: black;
+  color: white;
+  border-radius: 20px 20px 0 20px;
+  padding: 10px 15px;
+  max-width: 70%;
+}
+
+.ai-chat-area {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
+  border-radius: 20px 20px 20px 0;
+  padding: 10px 15px;
+  max-width: 70%;
+}
+
+#userImage,
+#aiImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.prompt-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#userInput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+#sendBtn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
