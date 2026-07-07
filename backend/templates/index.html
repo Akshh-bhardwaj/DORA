@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dora AI - Premium Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="chat-wrapper">
+        <header class="chat-header">
+            <div class="header-info">
+                <div class="avatar-container">
+                    <img src="https://ui-avatars.com/api/?name=Dora&background=4a80f0&color=fff&rounded=true" alt="Dora Avatar" class="avatar" />
+                    <span class="status-dot"></span>
+                </div>
+                <div>
+                    <h2>Dora AI</h2>
+                    <p>Always online</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn" title="Settings"><i class="fa-solid fa-ellipsis-v"></i></button>
+            </div>
+        </header>
+
+        <div class="chat-box" id="chatBox">
+            <div class="message-wrapper ai-message-wrapper">
+                <img src="https://ui-avatars.com/api/?name=Dora&background=4a80f0&color=fff&rounded=true" alt="Dora" class="message-avatar" />
+                <div class="message-bubble ai-bubble">
+                    Hi! I’m <strong>Dora</strong> ✨ — your premium AI assistant! <br>
+                    How can I help you today?
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prompt-area">
+            <button class="attachment-btn"><i class="fa-solid fa-paperclip"></i></button>
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Ask Dora anything..." autocomplete="off" />
+            </div>
+            <button id="sendBtn" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
